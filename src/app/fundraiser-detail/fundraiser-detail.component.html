@@ -1,0 +1,8 @@
+<div *ngIf="fundraiserToDisplay | async">
+  <h3>Category: {{(fundraiserToDisplay | async).category}}</h3>
+  <h3>Organizer Name: {{(fundraiserToDisplay | async).organiserName}}</h3>
+  <h3>Donation Goal: {{(fundraiserToDisplay | async).donationGoal}}</h3>
+  <h3>Project Name: {{(fundraiserToDisplay | async).projectName}}</h3>
+  <h3>Project Description: {{(fundraiserToDisplay | async).description}}</h3>
+  <h3>Donations Received: {{(fundraiserToDisplay | async).donationReceived}}</h3>
+  <h3>Receiving Donations: {{(fundraiserToDisplay | async).status}}</h3>

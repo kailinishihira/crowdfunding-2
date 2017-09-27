@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  background-image: url('../resources/images/image2.png');
+  background-repeat: no-repeat;
+  background-position: top;
+}
+h1
+{
+  text-align: center;
+}
+/*.start
+{
+  margin-top: 60%;
+  margin-left: 50%;
+
+}
+.show
+{
+  margin-top: 60%;
+
+}*/
+
+
+p {
+  text-align: center;
+}
+.well {
+  margin-top: 60%;
+  background-color: white;
+}

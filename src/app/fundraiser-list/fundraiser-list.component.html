@@ -1,0 +1,11 @@
+<h3>Fundraisers</h3>
+<div *ngFor="let fundraiser of fundraisers | async" class="panel panel-default">
+  <div class="panel-body">
+      <h3 (click) = "goToDetailPage(fundraiser)"><em>{{fundraiser.projectName}}</em>, Goal: {{fundraiser.donationGoal}}</h3>
+      <!-- <div *ngIf="currentRoute === '/admin'"> -->
+        <!-- {{album.description}}
+        <hr>
+        <app-edit-album [selectedAlbum]="album"></app-edit-album>
+      </div> -->
+    </div>
+  </div>
