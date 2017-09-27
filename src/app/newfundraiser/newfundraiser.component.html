@@ -4,13 +4,22 @@
   </div>
   <div class="panel-body">
     <label for="category">Category</label>
-    <select class="category-fundraisers" name="category-fundraisers">
-      <option value="allcategories">All Categories</option>
+    <select #category class="filter" (change) = onChangeCategory($event.target.value) name="category-fundraisers">
+      <option value="allcategories" selected="selected">All Categories</option>
       <option value="medical">Medical</option>
       <option value="education">Education</option>
       <option value="business">Business</option>
       <option value="charity">Charity</option>
       <option value="animals">Animals</option>
     </select>
+    <label>Organiser Name</label>
+    <input #organiserName>
+    <label>Donation Goal</label>
+    <input #donationGoal>
+    <label>Project Name</label>
+    <input #projectName>
+    <label>Description</label>
+    <input #description>
+  <button type="button" name="Add" (click) = "submitForm(category.value, organiserName.value, donationGoal.value, projectName.value, description.value); organiserName.value=''; donationGoal.value=''; projectName.value=''; description.value=''">Start Fundraiser</button>
   </div>
 </div>

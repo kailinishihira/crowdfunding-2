@@ -1,29 +1,20 @@
-body{
-  background-image: url('../resources/images/image2.png');
+body {
+  /*background-image: url('../resources/images/image-kid.jpeg');*/
   background-repeat: no-repeat;
   background-position: top;
+  background-size: 105vh;
 }
-h1
-{
+
+img {
+    text-align: center;
+    width: 90%;
+}
+
+#kid-photo {
   text-align: center;
 }
-/*.start
-{
-  margin-top: 60%;
-  margin-left: 50%;
 
-}
-.show
-{
-  margin-top: 60%;
-
-}*/
-
-
-p {
-  text-align: center;
-}
 .well {
-  margin-top: 60%;
+  margin-top: 2%;
   background-color: white;
 }

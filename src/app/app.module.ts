@@ -11,6 +11,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { masterFirebaseConfig } from './api-keys';
 import { FundraiserDetailComponent } from './fundraiser-detail/fundraiser-detail.component';
 import { NewfundraiserComponent } from './newfundraiser/newfundraiser.component';
+import { CategoryPipe } from './category.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     WelcomeComponent,
     FundraiserListComponent,
     FundraiserDetailComponent,
-    NewfundraiserComponent
+    NewfundraiserComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,

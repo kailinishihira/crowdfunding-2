@@ -1,5 +1,19 @@
 <h3>Fundraisers</h3>
-<div *ngFor="let fundraiser of fundraisers | async" class="panel panel-default">
+
+<label for="category">Category</label>
+<select class="filter" (change) = onChangeCategory($event.target.value) name="category-fundraisers">
+  <option value="allcategories" selected="selected">All Categories</option>
+  <option value="medical">Medical</option>
+  <option value="education">Education</option>
+  <option value="business">Business</option>
+  <option value="charity">Charity</option>
+  <option value="animals">Animals</option>
+</select>
+
+
+<div *ngFor="let fundraiser of fundraisers | async | category: filterByCategory" class="panel panel-default">
+
+<div *ngIf ="fundraiser">
   <div class="panel-body">
       <h3 (click) = "goToDetailPage(fundraiser)"><em>{{fundraiser.projectName}}</em>, Goal: {{fundraiser.donationGoal}}</h3>
       <!-- <div *ngIf="currentRoute === '/admin'"> -->
@@ -9,3 +23,7 @@
       </div> -->
     </div>
   </div>
+<!-- <ng-template>
+  <h3>no records</h3>
+</ng-template> -->
+</div>

@@ -10,9 +10,12 @@ import { FundraiserService} from '../fundraiser.service';
   styleUrls: ['./fundraiser-list.component.css'],
   providers: [FundraiserService]
 })
+
 export class FundraiserListComponent implements OnInit {
+  filterByCategory: string = "allCategories";
   fundraisers: FirebaseListObservable<any[]>;
    currentRoute: string = this.router.url;
+
 
   constructor(private router: Router, private fundraiserService: FundraiserService) { }
 
@@ -22,5 +25,9 @@ export class FundraiserListComponent implements OnInit {
 
   goToDetailPage(clickedFundraiser) {
     this.router.navigate(['fundraisers', clickedFundraiser.$key]);
+  }
+  onChangeCategory(optionFromCategory)
+  {
+    this.filterByCategory = optionFromCategory;
   }
 }
