@@ -1,13 +1,9 @@
 body {
-  /*background-image: url('../resources/images/image-kid.jpeg');*/
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 105vh;
+  background-color: red;
 }
 
 img {
-    text-align: center;
-    width: 90%;
+  text-align: center;
 }
 
 #kid-photo {
@@ -16,5 +12,6 @@ img {
 
 .well {
   margin-top: 2%;
+  margin-bottom: 5%;
   background-color: white;
 }

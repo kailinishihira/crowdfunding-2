@@ -20,7 +20,9 @@ export class CategoryPipe implements PipeTransform {
         {
           output.push(input[i]);
         }
+
       }
+      
     return output;
   }
 
@@ -68,7 +70,7 @@ export class CategoryPipe implements PipeTransform {
       }
       return output;
     }
-    else 
+    else
     {
       return input;
     }

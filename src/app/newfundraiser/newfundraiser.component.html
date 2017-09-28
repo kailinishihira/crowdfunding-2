@@ -1,25 +1,60 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Add New Album to Inventory</h3>
+    <h3 class="panel-title">New Fundraiser</h3>
   </div>
   <div class="panel-body">
-    <label for="category">Category</label>
-    <select #category class="filter" (change) = onChangeCategory($event.target.value) name="category-fundraisers">
-      <option value="allcategories" selected="selected">All Categories</option>
-      <option value="medical">Medical</option>
-      <option value="education">Education</option>
-      <option value="business">Business</option>
-      <option value="charity">Charity</option>
-      <option value="animals">Animals</option>
-    </select>
-    <label>Organiser Name</label>
-    <input #organiserName>
-    <label>Donation Goal</label>
-    <input #donationGoal>
-    <label>Project Name</label>
-    <input #projectName>
-    <label>Description</label>
-    <input #description>
-  <button type="button" name="Add" (click) = "submitForm(category.value, organiserName.value, donationGoal.value, projectName.value, description.value); organiserName.value=''; donationGoal.value=''; projectName.value=''; description.value=''">Start Fundraiser</button>
+    <div class="row">
+      <div class="col-md-2">
+        <label for="category">Category:</label>
+      </div>
+      <div class="col-md-10">
+        <select #category class="filter" (change) = onChangeCategory($event.target.value) name="category-fundraisers">
+          <!-- <option value="allcategories" selected="selected">All Categories</option> -->
+          <option value="medical">Medical</option>
+          <option value="education">Education</option>
+          <option value="business">Business</option>
+          <option value="charity">Charity</option>
+          <option value="animals">Animals</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <label>Organizer Name:</label>
+      </div>
+      <div class="col-md-10">
+        <input class="form-control" #organiserName>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <label>Donation Goal:  $</label>
+      </div>
+      <div class="col-md-10">
+        <input class="form-control" #donationGoal>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <label>Project Name:</label>
+      </div>
+      <div class="col-md-10">
+        <input class="form-control" #projectName>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <label>Description:</label>
+      </div>
+      <div class="col-md-10">
+        <input class="form-control" #description>
+      </div>
+    </div>
+
+  <button class="btn btn-default" type="button" name="Add" (click) = "submitForm(category.value, organiserName.value, donationGoal.value, projectName.value, description.value); organiserName.value=''; donationGoal.value=''; projectName.value=''; description.value=''">Start Fundraiser</button>
   </div>
 </div>
