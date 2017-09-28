@@ -12,6 +12,8 @@ import { masterFirebaseConfig } from './api-keys';
 import { FundraiserDetailComponent } from './fundraiser-detail/fundraiser-detail.component';
 import { NewfundraiserComponent } from './newfundraiser/newfundraiser.component';
 import { CategoryPipe } from './category.pipe';
+import { EditFundraiserComponent } from './edit-fundraiser/edit-fundraiser.component';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -27,7 +29,9 @@ export const firebaseConfig = {
     FundraiserListComponent,
     FundraiserDetailComponent,
     NewfundraiserComponent,
-    CategoryPipe
+    CategoryPipe,
+    EditFundraiserComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

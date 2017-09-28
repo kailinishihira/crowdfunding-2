@@ -14,7 +14,7 @@ import { FundraiserService} from '../fundraiser.service';
 export class FundraiserListComponent implements OnInit {
   filterByCategory: string = "allCategories";
   fundraisers: FirebaseListObservable<any[]>;
-   currentRoute: string = this.router.url;
+  currentRoute: string = this.router.url;
 
 
   constructor(private router: Router, private fundraiserService: FundraiserService) { }

@@ -4,12 +4,11 @@
   </div>
   <div class="panel-body">
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <label for="category">Category:</label>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-9">
         <select #category class="filter" (change) = onChangeCategory($event.target.value) name="category-fundraisers">
-          <!-- <option value="allcategories" selected="selected">All Categories</option> -->
           <option value="medical">Medical</option>
           <option value="education">Education</option>
           <option value="business">Business</option>
@@ -18,42 +17,47 @@
         </select>
       </div>
     </div>
+    <br>
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <label>Organizer Name:</label>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-9">
         <input class="form-control" #organiserName>
       </div>
     </div>
+    <br>
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <label>Donation Goal:  $</label>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-9">
         <input class="form-control" #donationGoal>
       </div>
     </div>
+    <br>
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <label>Project Name:</label>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-9">
         <input class="form-control" #projectName>
       </div>
     </div>
+    <br>
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <label>Description:</label>
       </div>
-      <div class="col-md-10">
-        <input class="form-control" #description>
+      <div class="col-md-9">
+        <textarea #description rows="15" cols="115"></textarea>
       </div>
     </div>
+    <br>
 
   <button class="btn btn-default" type="button" name="Add" (click) = "submitForm(category.value, organiserName.value, donationGoal.value, projectName.value, description.value); organiserName.value=''; donationGoal.value=''; projectName.value=''; description.value=''">Start Fundraiser</button>
   </div>

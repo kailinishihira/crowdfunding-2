@@ -1,0 +1,61 @@
+<h3>Edit Fundraiser</h3>
+
+<div class="row">
+  <div class="col-md-3">
+    <label>New Fundraiser Category:</label>
+  </div>
+  <div class="col-md-9">
+    <select [(ngModel)]="selectedFundraiser.category">
+      <option value="Medical">Medical</option>
+      <option value="Education">Education</option>
+      <option value="Business">Business</option>
+      <option value="Charity">Charity</option>
+      <option value="Animals">Animals</option>
+    </select>
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-md-3">
+    <label>New Fundraiser Organizer Name:</label>
+  </div>
+  <div class="col-md-9">
+    <input [(ngModel)]="selectedFundraiser.organiserName" class="form-control">
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-md-3">
+    <label>New Fundraiser Donation Goal: $</label>
+  </div>
+  <div class="col-md-9">
+    <input [(ngModel)]="selectedFundraiser.donationGoal" class="form-control">
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-md-3">
+    <label>New Fundraiser Project Name:</label>
+  </div>
+  <div class="col-md-9">
+    <input [(ngModel)]="selectedFundraiser.projectName" class="form-control">
+  </div>
+</div>
+<br>
+
+<div class="row">
+  <div class="col-md-3">
+    <label>New Fundraiser Description:</label>
+  </div>
+  <div class="col-md-9">
+    <textarea [(ngModel)]="selectedFundraiser.description"  rows="15" cols="115"></textarea>
+  </div>
+</div>
+<br>
+
+<button class="btn btn-default" (click)="updateThisFundraiser(selectedFundraiser)">Save Update</button>
+<hr>
+<button class="btn btn-default" (click)="deleteThisFundraiser(selectedFundraiser)">Delete</button>

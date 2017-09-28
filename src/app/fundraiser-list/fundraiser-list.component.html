@@ -18,13 +18,15 @@
 <div *ngFor="let fundraiser of fundraisers | async | category: filterByCategory" class="panel panel-default">
   <div class="panel-body">
       <h3 (click) = "goToDetailPage(fundraiser)"><em>{{fundraiser.projectName}}</em>, Goal: ${{fundraiser.donationGoal}}</h3>
-      <!-- <div *ngIf="currentRoute === '/admin'"> -->
-        <!-- {{album.description}}
+      <div *ngIf="currentRoute === '/admin'">
+        <h4>Organizer Name: {{fundraiser.organiserName}}</h4>
+        <h4>Category: {{fundraiser.category}}</h4>
+        <h4>Donations Received: ${{fundraiser.donationReceived}}</h4>
+        <h4>Accepting Donations? {{fundraiser.status}}</h4>
+        <h4>Description:</h4>
+        <p>{{fundraiser.description}}</p>
         <hr>
-        <app-edit-album [selectedAlbum]="album"></app-edit-album>
-      </div> -->
+        <app-edit-fundraiser [selectedFundraiser]="fundraiser"></app-edit-fundraiser>
+      </div>
   </div>
-<!-- <ng-template>
-  <h3>no records</h3>
-</ng-template> -->
 </div>
