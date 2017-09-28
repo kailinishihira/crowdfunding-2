@@ -22,6 +22,7 @@ export class FundraiserService {
   {
     return this.database.object('/fundraisers/'+ fundraiserId);
   }
+
   updateFundraiser(localUpdatedFundraiser)
   {
     var fundraiserEntryInFirebase =
@@ -32,4 +33,14 @@ export class FundraiserService {
     var fundraiserEntryInFirebase = this.getFundraiserById(localFundraiserToDelete.$key);
     fundraiserEntryInFirebase.remove()
   }
+  donateToFundraiser(localFundraiserToDonate) {
+    var fundraiserEntryInFirebase = this.getFundraiserById(localFundraiserToDonate.$key);
+    fundraiserEntryInFirebase.update({donationGoal: localFundraiserToDonate.donationGoal});
+  }
+
+  // addToDonationGoal(){
+  //
+  // }
+  //
+
 }

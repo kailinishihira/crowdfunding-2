@@ -5,6 +5,7 @@ import { FundraiserListComponent } from './fundraiser-list/fundraiser-list.compo
 import { FundraiserDetailComponent} from './fundraiser-detail/fundraiser-detail.component';
 import{ NewfundraiserComponent} from './newfundraiser/newfundraiser.component';
 
+
 const appRoutes: Routes = [
   {
     path: '',
@@ -21,7 +22,7 @@ const appRoutes: Routes = [
   {
     path: 'newfundraiser',
     component: NewfundraiserComponent
-  }
+  },
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
