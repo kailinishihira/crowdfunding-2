@@ -40,7 +40,7 @@ export class FundraiserDetailComponent implements OnInit {
     this.showDonationForm = true;
   }
 
-  // submitDonation(donationAmount: number) {
-  //
-  // }
+  submitDonation(donationAmount: number) {
+    this.fundraiserToDisplay.addDonation(donationAmount);
+  }
 }

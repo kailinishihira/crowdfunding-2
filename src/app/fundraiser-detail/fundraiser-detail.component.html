@@ -1,11 +1,13 @@
-<div *ngIf="fundraiserToDisplay">
-  <h3>Category: {{fundraiserToDisplay.category}}</h3>
-  <h3>Organizer Name: {{fundraiserToDisplay.organiserName}}</h3>
-  <h3>Donation Goal: $ {{fundraiserToDisplay.donationGoal}}</h3>
-  <h3>Project Name: {{fundraiserToDisplay.projectName}}</h3>
-  <h3>Project Description: {{fundraiserToDisplay.description}}</h3>
-  <h3>Donations Received: $ {{fundraiserToDisplay.donationReceived}}</h3>
-  <h3>Receiving Donations: {{fundraiserToDisplay.status}}</h3>
+<div *ngIf="fundraiserToDisplay" class="well">
+  <h4>Project Name: {{fundraiserToDisplay.projectName}}</h4>
+  <h4>Organizer Name: {{fundraiserToDisplay.organiserName}}</h4>
+  <h4>${{fundraiserToDisplay.donationReceived}} Donated</h4>
+  <h4>Donation Goal: $ {{fundraiserToDisplay.donationGoal}}</h4>
+  <h4>Receiving Donations: {{fundraiserToDisplay.status}}</h4>
+  <h4>Description: </h4>
+  <p>{{fundraiserToDisplay.description}}</p>
+  <p><strong>Category: </strong>{{fundraiserToDisplay.category}}</p>
+
 
   <!-- <h3>ID: {{(fundraiserToDisplay.$key}}</h3> -->
 

@@ -40,12 +40,16 @@ export class FundraiserService {
 
   donateToFundraiser(localFundraiserToDonate) {
     var fundraiserEntryInFirebase = this.getFundraiserById(localFundraiserToDonate.$key);
-    fundraiserEntryInFirebase.update({donationGoal: localFundraiserToDonate.donationGoal});
+    fundraiserEntryInFirebase.update({donationReceived: localFundraiserToDonate.donationReceived});
   }
 
-  // addToDonationGoal(){
-  //
-  // }
-  //
+  addDonation(localFundraiserToDonate, donationAmount){
+    var fundraiserEntryInFirebase = this.getFundraiserById(localFundraiserToDonate.$key);
+
+    localFundraiserToDonate.donationReceived += donationAmount;
+    // var totalDonationReceived = this.getFundraiserById(localFundraiserToDonate.donationReceived)
+
+  }
+
 
 }
