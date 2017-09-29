@@ -16,6 +16,7 @@ import { Router } from '@angular/router';
 export class FundraiserDetailComponent implements OnInit {
   fundraiserId: string;
   fundraiserToDisplay;
+
   currentRoute: string = this.router.url;
   showDonationForm: boolean = false;
 
@@ -39,8 +40,9 @@ export class FundraiserDetailComponent implements OnInit {
   donationForm() {
     this.showDonationForm = true;
   }
+  //
+  // submitDonation(donationAmount: number) {
+  //   this.fundraiserToDisplay.addDonation(this.fundraiserToDisplay.$key, donationAmount);
+  // }
 
-  submitDonation(donationAmount: number) {
-    this.fundraiserToDisplay.addDonation(donationAmount);
-  }
 }
